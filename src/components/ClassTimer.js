@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 class ClassTimer extends Component {
     interval
 
     constructor(props) {
-      super(props)
+      super(props);
     
       this.state = {
          timer: 0
@@ -13,12 +13,12 @@ class ClassTimer extends Component {
 
     componentDidMount(){
         this.interval = setInterval(() =>{
-            this.setState(prevState => ({timer : prevState.timer + 1}))
+            this.setState(prevState => ({timer : prevState.timer + 1}));
         }, 1000)
     }
 
     componentWillUnmount(){
-        clearInterval(this.interval)
+        clearInterval(this.interval);
     }
 
     render() {
